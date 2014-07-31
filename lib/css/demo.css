@@ -1,0 +1,82 @@
+/* global CSS */
+body{line-height: 1.4; color: #333; font-size: 12px; font-family: sans-serif;}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,form{margin:0}
+ul,ol{padding-left:0;list-style-type:none}
+h4,h5,h6{font-size:1em}
+input,textarea,select{font-size:100%;font-family:inherit}
+img{border:0}
+
+/* link color same as qucik-layout.css */
+a {color: #0074d9; text-decoration: none;}
+a:hover { text-decoration: underline;}
+.decimal{list-style: decimal inside;}
+.qr_code{position: relative; display: inline-block; width: 100px; height: 100px; margin-bottom: -5px;}
+
+.dropzone .size-red {
+    background-color: #ff4040;
+    border-color: #ff4040; }
+.dropzone .size-orange {
+    background-color: #ffba00;
+    border-color: #ffba00; }
+.dropzone .dz-default.dz-message span {
+    display: block;
+    text-align: center;
+    height: 123px;
+    line-height: 120px;
+    font-size: 28px;
+    color: #999; }
+
+.dz-preview.size-red .dz-details .dz-size {
+    color: #FFF; }
+.dz-preview.size-red .dz-details .dz-size:after {
+    content: "    移动端加载困难";
+    color: #FFF; }
+
+.dz-preview.size-orange .dz-details .dz-size {
+    color: #666; }
+.dz-preview.size-orange .dz-details .dz-size:after {
+    content: "    移动端加载困难";
+    color: #666; }
+
+.tip {
+    padding-left: 5px;
+    line-height: 1em;
+    background-color: white;
+    float: right; }
+
+.tip-red {
+    color: #e74c3c;
+    border-left: solid 14px #e74c3c; }
+
+.tip-orange {
+    color: #f1c40f;
+    border-left: solid 14px #f1c40f; }
+
+.del_album, .edit_album {
+    cursor: pointer;
+    margin-left: 10px;
+    float: right; }
+
+.dropzone .dz-preview .preview-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 200px;
+    overflow: hidden; }
+
+.dropzone .dz-preview,
+.dropzone-previews .dz-preview {
+    cursor: move; }
+
+.dropzone .dz-preview .dz-details,
+.dropzone-previews .dz-preview .dz-details {
+    width: 160px;
+    height: 200px; }
+
+.dropzone .dz-preview .dz-details img,
+.dropzone-previews .dz-preview .dz-details img {
+    max-width: 160px;
+    width: auto;
+    height: auto;
+    position: static; }
