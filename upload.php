@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 include './function.php';
 
@@ -49,9 +49,10 @@ if(isset($_REQUEST['album_json']) && $_REQUEST['album_json'] != ''){
             $tempFile = $_FILES['file']['tmp_name'][$i];
             if (file_exists($targetPath) && is_writable($targetPath)) {
                 // do upload logic here
-                $name = iconv('utf-8','gb2312',$file['name'][$i]);
-                //$targetFile =  $targetPath. $_FILES['file']['name'][$i];
-                $targetFile =  $targetPath.$name;
+                //$name = iconv('utf-8','gb2312',$file['name'][$i]);
+                //echo $name;
+                $targetFile =  $targetPath.iconv("UTF-8", "gb2312", $_FILES['file']['name'][$i]);
+                //$targetFile =  $targetPath.$name;
                 $return_val['tmpname'] .= $tempFile;
                 $return_val['target'] .= $targetFile;
                 if(move_uploaded_file($tempFile,$targetFile)){

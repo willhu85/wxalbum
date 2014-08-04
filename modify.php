@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Created by PhpStorm.
  * User: kamalyu
@@ -20,7 +20,8 @@ if(isset($_REQUEST['dir']) && $_REQUEST['dir'] != ''){
     $album =  listAlbum($dir);
     $num = count($album['album_images']);
     for($i=0;$i<$num;++$i){
-        $file_size = filesize($dir_base."/".$album['album_images'][$i]);
+        //$file_size = filesize($dir_base."/".$album['album_images'][$i]);
+        $file_size = filesize($dir_base."/".iconv("UTF-8", "gb2312", $album['album_images'][$i]));
         $file_url = $url_base."/".$album['album_images'][$i];
         $album['album_images'][$i] = array(
             'size'=>$file_size

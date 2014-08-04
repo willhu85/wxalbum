@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Created by PhpStorm.
  * User: kamalyu
@@ -65,11 +65,17 @@ if($err_info != ''){
     <div class="wrapper">
         <a href="javascript:activeAlbum();">开始演示</a>
     </div>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-1.11.1.js"></script>
     <script type="text/javascript">
         var img_list = '<?php echo join('|||',$album['album_images']); ?>'.split('|||');
+        var n_img_list =[];
+        $.each(img_list, function(i) {
+            var url = img_list[i].split("?t=")[0] + "?t=" + new Date().getTime();
+            n_img_list.push(url);
+        })
+        //console.log(n_img_list);
         function activeAlbum(){
-            WeixinJSBridge.invoke('imagePreview',{'current':img_list[0],'urls':img_list});
+            WeixinJSBridge.invoke('imagePreview',{'current':n_img_list[0],'urls':n_img_list});
         }
         $(function(){
             document.addEventListener("WeixinJSBridgeReady", onWeixinReady, false);            
