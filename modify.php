@@ -83,6 +83,7 @@ if($err_info != ''){
 <script type="text/javascript" src="lib/admin.js"></script>
 <script type="text/javascript">
     var global_album_img_arr = <?php echo json_encode($album['album_images']); ?>;
+    var global_album_time_arr = <?php echo json_encode($album['album_time']); ?>;
     var global_album_dir = '<?php echo $dir; ?>';
 </script>
 <?php

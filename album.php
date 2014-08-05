@@ -68,9 +68,10 @@ if($err_info != ''){
     <script type="text/javascript" src="lib/jquery-1.11.1.js"></script>
     <script type="text/javascript">
         var img_list = '<?php echo join('|||',$album['album_images']); ?>'.split('|||');
+        var img_time_list = '<?php echo join('|||',$album['album_time']); ?>'.split('|||');
         var n_img_list =[];
         $.each(img_list, function(i) {
-            var url = img_list[i].split("?t=")[0] + "?t=" + new Date().getTime();
+            var url = img_list[i].split("?t=")[0] + "?t=" + img_time_list[i];
             n_img_list.push(url);
         })
         //console.log(n_img_list);
