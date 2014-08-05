@@ -59,7 +59,7 @@ $album_list=get_album_list();
                 <?php echo $album_name; ?>
                 <a href="<?php echo $url; ?>" target="_blank">链接地址</a> &nbsp;|&nbsp;
                 <a href="modify.php?dir=<?php echo $dir_name ?>">编辑相册</a>&nbsp;|&nbsp;
-                <a href="javascript:;" class="delAlbum" data-dir="<?php echo $dir_name ?>" data-name="<?php echo $album_name; ?>" title="删除DEMO-<?php echo $album_name; ?>" style="display:none;" >删除DEMO-<?php echo $album_name; ?></a>
+                <a href="javascript:;" class="delAlbum" data-dir="<?php echo $dir_name ?>" data-name="<?php echo $album_name; ?>" title="删除DEMO-<?php echo $album_name; ?>" >删除DEMO-<?php echo $album_name; ?></a>
             </li>
         <?php } ?>
     </ul>

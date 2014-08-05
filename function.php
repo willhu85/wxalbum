@@ -79,14 +79,15 @@ function listAlbum($dir){
 }
 
 function delete_album($dir){
-    if(preg_match('/\/|\.\./',$dir)){
-        return false;
-    }else{
-        $ds          = DIRECTORY_SEPARATOR;
-        $dir = dirname( __FILE__ ) .$ds. 'album' . $ds.$dir;
-        system("rm -rf ".escapeshellarg($dir));
-        rmdir($fullpath);
+    $ds          = DIRECTORY_SEPARATOR;
+    $dir = dirname( __FILE__ ) .$ds. 'album' . $ds.$dir;
+    foreach(glob($dir . '/*') as $file) {
+        if(is_dir($file))
+            rrmdir($file);
+        else
+            unlink($file);
     }
+    rmdir($dir);
     return true;
 }
 
