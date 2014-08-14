@@ -18,8 +18,8 @@
 // Base path
 //===============================================
 
-define('WEB_DOMAIN','http://www.husays.com/wxalbum/'); //with http:// and trailing slash pls
-
+//define('WEB_DOMAIN','http://127.0.0.1:8080/Dropbox/willhu/wxalbum/'); //with http:// and trailing slash pls
+define('WEB_DOMAIN','http://www.husays.com/wxalbum/');
 //===============================================
 // Session
 //===============================================
